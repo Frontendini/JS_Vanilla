@@ -1,5 +1,8 @@
 # Indice
 - [Vite JS](https://vitejs.dev/)
+- Risorse utili:
+    - [Api MOVIEDB](https://developer.themoviedb.org/docs/getting-started)
+    - [Tailwind](https://tailwindcss.com/docs/installation)
 
 
 # Vite JS
