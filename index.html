@@ -1,19 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite App</title>
 
-    <link rel="stylesheet" href="/output.css">
-  </head>
-  <body>
-    <nav>
-      <a class="bg-red-500" href="/src/about-us.html">About us</a>
-    </nav>
-    <div id="app"></div>
+		<link rel="stylesheet" href="/output.css" />
+	</head>
+	<body class="text-neutral-300 h-[200vh] bg-black font-mono">
+		<nav class="fixed bottom-5 left-1/2 -translate-x-1/2 rounded-xl p-[1px] bg-gradient-to-tl from-stone-500 z-10">
+			<ul class="flex gap-x-5 bg-stone-800 py-2 px-5 rounded-xl">
+				<li>Home</li>
+				<li>Movies</li>
+				<li>Series</li>
+				<li>About us</li>
+			</ul>
+		</nav>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+
+		<div id="moviesContainer" class="grid grid-cols-4 p-20"></div>
+
+
+		<script src="/main.js"></script>
+	</body>
 </html>
