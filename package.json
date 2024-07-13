@@ -12,5 +12,9 @@
   "devDependencies": {
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "motion": "^10.18.0"
   }
 }

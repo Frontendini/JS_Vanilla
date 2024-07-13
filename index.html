@@ -6,22 +6,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
 
+		<link rel="stylesheet" href="/style.css" />
 		<link rel="stylesheet" href="/output.css" />
+
 	</head>
 	<body class="text-neutral-300 h-[200vh] bg-black font-mono">
-		<nav class="fixed bottom-5 left-1/2 -translate-x-1/2 rounded-xl p-[1px] bg-gradient-to-tl from-stone-500 z-10">
-			<ul class="flex gap-x-5 bg-stone-800 py-2 px-5 rounded-xl">
-				<li>Home</li>
-				<li>Movies</li>
-				<li>Series</li>
-				<li>About us</li>
-			</ul>
+		<nav class="fixed bottom-5 flex justify-between items-center w-full sm:w-fit sm:left-1/2 sm:-translate-x-1/2 px-5">
+			<div id="mainNav" class="translate-y-[10vh] sm:translate-y-[0vh] rounded-xl p-[1px] bg-gradient-to-tl from-stone-500">
+				<ul class="flex gap-x-5 bg-stone-800 py-2 px-5 rounded-xl text-nowrap">
+					<li>Home</li>
+					<li>Movies</li>
+					<li>Series</li>
+					<li>About us</li>
+				</ul>
+			</div>
+			<button id="menuToggleBtn" class="sm:hidden size-14 text-3xl bg-stone-800 rounded-full z-10">
+				<i class="bi bi-list"></i>
+			</button>
 		</nav>
 
 
-		<div id="moviesContainer" class="grid grid-cols-4 p-20"></div>
+		<div id="moviesContainer" class="grid grid-cols-2 gap-5 px-10 py-5"></div>
 
 
-		<script src="/main.js"></script>
+		<script type="module" src="/main.js"></script>
 	</body>
 </html>
