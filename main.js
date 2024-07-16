@@ -1,22 +1,18 @@
 import { animate } from "motion";
 
-const url = "https://api.themoviedb.org/3/movie/upcoming";
-const token =
-	"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZDk0MTJjZmQ2OWQyMmYxMTZhNTMxYzIyYjU2MjU1MiIsIm5iZiI6MTcyMDU0NjY2Mi43MDQ3Nywic3ViIjoiNjU2MjE3NTZhNmMxMDQwMGFjYTdhNGJhIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.m2JORSHJzDNN-sTiV3ZO9v4DORExH5O0HfXYKF3TBXQ";
+import Homepage from "./pages/Homepage";
+import MovieDetail from "./pages/MovieDetail";
 
-fetch(url, {
-	method: "GET",
-	headers: {
-		Authorization: `Bearer ${token}`,
-	},
-})
-	.then((response) => response.json())
-	.then((data) => {
-		data.results.forEach((movie) => {
-			let imgTag = `<img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">`;
-			document.querySelector("#moviesContainer").innerHTML += imgTag;
-		});
-	});
+const uri = window.location.pathname.slice(1).split("/");
+
+if (uri.includes("")){
+	Homepage();
+}else if(uri.includes("movie") && uri.includes("detail")){
+	MovieDetail(uri[1]);
+}else{
+	console.log("404");
+}
+
 
 /* navbar animation */
 let open = false;

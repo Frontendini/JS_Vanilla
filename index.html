@@ -9,26 +9,26 @@
 		<link rel="stylesheet" href="/style.css" />
 		<link rel="stylesheet" href="/output.css" />
 
+		<script type="module" src="/main.js"></script>
 	</head>
-	<body class="text-neutral-300 h-[200vh] bg-black font-mono">
-		<nav class="fixed bottom-5 flex justify-between items-center w-full sm:w-fit sm:left-1/2 sm:-translate-x-1/2 px-5">
-			<div id="mainNav" class="translate-y-[10vh] sm:translate-y-[0vh] rounded-xl p-[1px] bg-gradient-to-tl from-stone-500">
+	<body class="text-neutral-300 bg-black font-mono">
+		<nav
+			class="fixed bottom-5 flex justify-between items-center w-full sm:w-fit sm:left-1/2 sm:-translate-x-1/2 px-5 z-10">
+			<div
+				id="mainNav"
+				class="translate-y-[10vh] sm:translate-y-[0vh] rounded-xl p-[1px] bg-gradient-to-tl from-stone-500">
 				<ul class="flex gap-x-5 bg-stone-800 py-2 px-5 rounded-xl text-nowrap">
-					<li>Home</li>
+					<li><a href="/">Home</a></li>
 					<li>Movies</li>
 					<li>Series</li>
 					<li>About us</li>
 				</ul>
 			</div>
-			<button id="menuToggleBtn" class="sm:hidden size-14 text-3xl bg-stone-800 rounded-full z-10">
+			<button id="menuToggleBtn" class="sm:hidden size-14 text-3xl bg-stone-800 rounded-full">
 				<i class="bi bi-list"></i>
 			</button>
 		</nav>
 
-
-		<div id="moviesContainer" class="grid grid-cols-2 gap-5 px-10 py-5"></div>
-
-
-		<script type="module" src="/main.js"></script>
+		<main id="app"></main>
 	</body>
 </html>
