@@ -1,8 +1,10 @@
 import { formatDate } from "../utils/formatDate";
 
-export default async function MovieDetail(id) {
+export default async function MovieDetail() {
 	const url = import.meta.env.VITE_MOVIEDB_URL;
 	const token = import.meta.env.VITE_MOVIEDB_KEY;
+
+    const id = new URL(window.location.href).searchParams.get('id')
 
 	const options = {
 		method: "GET",

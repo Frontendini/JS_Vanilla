@@ -16,7 +16,7 @@ export default function MovieCard(movie){
                         </div>
                     </div>
                     <p class="line-clamp-4 mt-4 text-sm">${movie.overview}</p>
-                    <a href="/movie/${movie.id}/detail" class="inline-block bg-red-600 text-white py-1 px-2 rounded-md mt-10">Detail</a>
+                    <a href="/movie/detail?id=${movie.id}" class="inline-block bg-red-600 text-white py-1 px-2 rounded-md mt-10">Detail</a>
                 </div>
             </div>
         </div>
